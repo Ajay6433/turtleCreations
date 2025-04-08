@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap';
 @import "tailwindcss";
 
 :root {
@@ -5,22 +6,49 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+*{
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.first{
+  grid-area: events;
+}
+.second{
+  grid-area: happyCustomers;
+}
+.third{
+  grid-area: corpEvents;
+}
+.fourth{
+  grid-area: corpDetails;
+}
+.fifth{
+  grid-area: outdoorEvents;
+}
+.sixth{
+  grid-area: outdoorDetails;
+}
+.seventh{
+  grid-area: eduEvents;
+}
+.eighth{
+  grid-area: eduDetails;
+}
+.ninth{
+  grid-area: personalEvents;
+}
+.tenth{
+  grid-area: personalDetails;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* #events-container{
+  display: grid;
+  grid-template-areas: 'events          corpEvents outdoorEvents'
+                       'happyCustomers  corpDetails outdoorDetails'
+                       'happyCustomers  eduEvents personalEvents'
+                       'happyCustomers eduDetails personalDetails';
+} */
