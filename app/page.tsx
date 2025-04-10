@@ -1,9 +1,9 @@
-import Main from "@/components/Main";
 import HeroSection from "@/components/HeroSection";
 import CorporatePartyCarousel from "@/components/CorporatePartyCarousel";
 import Image from "next/image";
 import MaxWidthContainer from "@/components/MaxWidthContainer";
 import EventStatsGrid from "@/components/EventStatsGrid";
+import GlimpseHeading from "@/components/GlimpseHeading";
 import ServicesHeading from "@/components/ServicesHeading";
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
       <CorporatePartyCarousel/>
       <ServicesHeading/>
       <EventStatsGrid/>
+      <GlimpseHeading/>
       </>
     // {/* // </MaxWidthContainer> */}
   );
