@@ -15,6 +15,7 @@ const EventStatsGrid = () => {
         `,
         gridTemplateColumns: 'repeat(3, 1fr)',
         gridTemplateRows: '1fr .3fr 1fr .3fr',
+        marginBottom: '2rem',
       }}
     >
       {/* Events Stat */}
