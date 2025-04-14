@@ -3,61 +3,58 @@ import { useEffect, useRef, useState } from 'react';
 
 const TurtleCursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const [isPointer, setIsPointer] = useState(false);
   const [trail, setTrail] = useState<{ x: number; y: number; id: number }[]>([]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Move turtle
       if (cursorRef.current) {
         cursorRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
       }
 
-      // Add a trail dot
       const id = Date.now();
       setTrail((prev) => [...prev, { x: e.clientX, y: e.clientY, id }]);
 
-      // Remove it after 700ms
       setTimeout(() => {
         setTrail((prev) => prev.filter((dot) => dot.id !== id));
       }, 700);
+
+      // Check element under cursor to update pointer state
+      const el = document.elementFromPoint(e.clientX, e.clientY);
+      if (el && (el as HTMLElement).tagName === 'A' || (el as HTMLElement).onclick || el?.classList.contains('cursor-pointer')) {
+        setIsPointer(true);
+      } else {
+        setIsPointer(false);
+      }
     };
 
-    document.body.style.cursor = 'none'; // Hide system cursor
+    document.body.style.cursor = 'none';
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      document.body.style.cursor = 'auto'; // Restore cursor on unmount
+      document.body.style.cursor = 'auto';
     };
   }, []);
 
   return (
     <>
-      {/* Turtle Cursor */}
+      {/* Custom Cursor */}
       <div
         ref={cursorRef}
-        className="fixed z-[9999] pointer-events-none text-3xl transition-transform duration-75"
+        className="fixed z-[9999] pointer-events-none transition-transform duration-75"
         style={{
+          width: '32px',
+          height: '32px',
           top: 0,
           left: 0,
           transform: 'translate(-50%, -50%)',
+          backgroundImage: `url(${isPointer ? '/pointer.png' : '/cursor.png'})`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
         }}
-      >
-        🐢
-      </div>
+      />
 
-      {/* Trail Dots */}
-      {trail.map((dot) => (
-        <div
-          key={dot.id}
-          className="fixed w-2 h-2 bg-green-400 rounded-full opacity-60 pointer-events-none transition-opacity duration-700"
-          style={{
-            top: dot.y,
-            left: dot.x,
-            transform: 'translate(-50%, -50%)',
-          }}
-        />
-      ))}
     </>
   );
 };
