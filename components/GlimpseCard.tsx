@@ -11,10 +11,10 @@ const GlimpseCard = ({ title, description, imgSrc }: GlimpseCardProps) => {
     <div className="box-border w-full max-w-[536px] min-h-[300px] bg-white border-1 mb-8 mx-auto">
       <div className="w-full h-full flex flex-col items-center p-4 relative">
         {/* Border elements */}
-        <div className="w-full h-[4px] rounded-2xl bg-black absolute top-0"></div>
-        <div className="w-[4px] h-full rounded-2xl bg-black absolute left-0 -top-3"></div>
-        <div className="w-[4px] h-full rounded-2xl bg-black absolute right-0 -top-3"></div>
-        <div className="w-full h-[4px] rounded-2xl bg-black absolute bottom-0"></div>
+        <div className="w-[calc(100%+16px)] h-[4px] rounded-2xl bg-black absolute top-0 -left-2"></div>
+        <div className="w-[4px] h-[calc(100%+16px)] rounded-2xl bg-black absolute left-0 -top-2"></div>
+        <div className="w-[4px] h-[calc(100%+16px)] rounded-2xl bg-black absolute right-0 -top-2"></div>
+        <div className="w-[calc(100%+16px)] h-[4px] rounded-2xl bg-black absolute bottom-0 -left-2"></div>
 
         {/* Image */}
         <img
