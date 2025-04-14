@@ -1,22 +1,50 @@
 'use client';
 import React from 'react';
+import { useEffect, useState } from 'react';
 
 const EventStatsGrid = () => {
+
+  const useIsLargeScreen = () => {
+    const [isLarge, setIsLarge] = useState(false);
+  
+    useEffect(() => {
+      const mediaQuery = window.matchMedia('(min-width: 1024px)');
+      const update = () => setIsLarge(mediaQuery.matches);
+      update();
+  
+      mediaQuery.addEventListener('change', update);
+      return () => mediaQuery.removeEventListener('change', update);
+    }, []);
+  
+    return isLarge;
+  };
+
+  const isLarge = useIsLargeScreen();
+
   return (
     <div
       id='events-container'
-      style={{
-        display: 'grid',
-        gridTemplateAreas: `
-          'events          corpEvents     outdoorEvents'
-          'happyCustomers  corpDetails    outdoorDetails'
-          'happyCustomers  eduEvents      personalEvents'
-          'happyCustomers  eduDetails     personalDetails'
-        `,
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gridTemplateRows: '1fr .3fr 1fr .3fr',
-        marginBottom: '2rem',
-      }}
+      
+      style={
+        isLarge
+          ? {
+              display: 'grid',
+              gridTemplateAreas: `
+                'events          corpEvents     outdoorEvents'
+                'happyCustomers  corpDetails    outdoorDetails'
+                'happyCustomers  eduEvents      personalEvents'
+                'happyCustomers  eduDetails     personalDetails'
+              `,
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gridTemplateRows: '1fr .3fr 1fr .3fr',
+              marginBottom: '2rem',
+            }
+          : {
+            border: '1px solid black',
+            width: '90%',
+            margin: '0 auto',
+          }
+      }
     >
       {/* Events Stat */}
       <div className='first flex items-center justify-center px-6 py-10 text-3xl font-bold border border-black bg-white'>
