@@ -6,6 +6,7 @@ import EventStatsGrid from "@/components/EventStatsGrid";
 import GlimpseHeading from "@/components/GlimpseHeading";
 import ServicesHeading from "@/components/ServicesHeading";
 import GlimpseCards from "@/components/GlimpseCards";
+import SendMessage from "@/components/SendMessage";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <EventStatsGrid/>
       <GlimpseHeading/>
       <GlimpseCards/>
+      <SendMessage/>
       </>
     // {/* // </MaxWidthContainer> */}
   );
