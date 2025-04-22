@@ -44,11 +44,6 @@
 .tenth{
   grid-area: personalDetails;
 }
-
-/* #events-container{
-  display: grid;
-  grid-template-areas: 'events          corpEvents outdoorEvents'
-                       'happyCustomers  corpDetails outdoorDetails'
-                       'happyCustomers  eduEvents personalEvents'
-                       'happyCustomers eduDetails personalDetails';
-} */
+.boxShadow {
+  box-shadow: 10px 10px 0 rgba(81, 81, 81, 0.76);
+}
