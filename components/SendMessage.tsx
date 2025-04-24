@@ -8,7 +8,7 @@ const SendMessage = () => {
             <div className="w-full max-w-4/5 flex flex-col justify-center items-center">
                 <div className="w-full max-w-[696px] text-center">
                     <h2 className="text-[32px] md:text-[48px] font-bold bg-gradient-to-r from-[#5F8385] to-[#96BEC1] bg-clip-text text-transparent leading-tight">
-                        Let's plan your Eventsdajnfjsndjkfnkjnsdf hassle-free and unforgettable{" "}
+                        Let's plan your Eventsd hassle-free and unforgettable{" "}
                     </h2>
                 </div>
                 <div className="w-full max-w-[831px] mt-4 text-center">

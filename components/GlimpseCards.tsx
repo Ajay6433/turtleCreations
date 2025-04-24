@@ -10,12 +10,10 @@ interface GlimpseCardData {
 
 const GlimpseCards: React.FC = () => {
   const glimpseCards: GlimpseCardData[] = [
-    { id: 1, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/glimpse.png" },
-        { id: 2, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/glimpse.png" },
-        { id: 3, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/glimpse.png" },
-        { id: 4, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/glimpse.png" },
-        { id: 5, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/glimpse.png" },
-        { id: 6, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/glimpse.png" },
+    { id: 1, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/corpOutdoor.jpg" },
+        { id: 2, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/edu.jpg" },
+        { id: 3, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/personalEvent.jpg" },
+        { id: 4, title: "About Occasion/Event", description: "About where and for whom you organised it", imgSrc: "/outdoor.jpg" },
   ];
   return (
     <div className="flex gap-4 w-[100vw] max-w-[1251px] mx-auto mt-10 px-4 lg:px-0">
