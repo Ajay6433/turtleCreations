@@ -40,7 +40,7 @@ const EventStatsGrid = () => {
               marginBottom: '2rem',
             }
           : {
-            border: '1px solid black',
+            border: '2px solid black',
             width: '90%',
             margin: '0 auto',
           }
