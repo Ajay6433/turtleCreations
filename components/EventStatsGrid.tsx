@@ -73,8 +73,10 @@ const EventStatsGrid = () => {
         </div>
       </div>
 
-      <div className='fourth border border-black px-6 py-10 flex items-center justify-center font-semibold bg-white'>
-        Learn more
+      <div className='fourth border border-black px-6 py-10 flex items-center justify-center bg-white'>
+        <span className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#5F8385] to-[#96BEC1] bg-clip-text text-transparent">
+          Discover Excellence
+        </span>
       </div>
 
       {/* Outdoor Trips */}
@@ -88,8 +90,10 @@ const EventStatsGrid = () => {
         </div>
       </div>
 
-      <div className='sixth border border-black px-6 py-10 flex items-center justify-center font-semibold bg-white'>
-        Learn more
+      <div className='sixth border border-black px-6 py-10 flex items-center justify-center bg-white'>
+        <span className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">
+          Adventure Awaits
+        </span>
       </div>
 
       {/* Educational Event */}
@@ -103,8 +107,10 @@ const EventStatsGrid = () => {
         </div>
       </div>
 
-      <div className='eighth border border-black px-6 py-10 flex items-center justify-center font-semibold bg-white'>
-        Learn more
+      <div className='eighth border border-black px-6 py-10 flex items-center justify-center bg-white'>
+        <span className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-pink-400 to-blue-500 bg-clip-text text-transparent">
+          Unlock Knowledge
+        </span>
       </div>
 
       {/* Personal Event */}
@@ -118,8 +124,10 @@ const EventStatsGrid = () => {
         </div>
       </div>
 
-      <div className='tenth border border-black px-6 py-10 flex items-center justify-center font-semibold bg-white'>
-        Learn more
+      <div className='tenth border border-black px-6 py-10 flex items-center justify-center bg-white'>
+        <span className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+          Celebrate Moments
+        </span>
       </div>
     </div>
   );

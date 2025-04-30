@@ -1,0 +1,62 @@
+import React from "react";
+import {
+  DraggableCardBody,
+  DraggableCardContainer,
+} from "@/components/ui/draggable-card";
+import Image from "next/image";
+
+export function DraggableCardDemo() {
+  const items = [
+    {
+      title: "Corporate Event",
+      image:
+        "/corpOutdoor.jpg",
+      className: "absolute top-10 left-[20%] rotate-[-5deg]",
+    },
+    {
+      title: "Diwali Mela",
+      image:
+        "/stalls.jpg",
+      className: "absolute top-10 left-[20%] rotate-[-5deg]",
+    },
+    {
+      title: "Outdoor Event",
+      image:
+        "/outdoor.jpg",
+      className: "absolute top-40 left-[25%] rotate-[-7deg]",
+    },
+    {
+      title: "Education Event",
+      image:
+        "/edu.jpg",
+      className: "absolute top-5 left-[40%] rotate-[8deg]",
+    },
+    {
+      title: "Personal Event",
+      image:
+        "/personalEvent.jpg",
+      className: "absolute top-32 left-[55%] rotate-[10deg]",
+    },
+  ];
+  return (
+    <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
+      <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
+        Discover the perfect event for every occasion with Turtle Creations 
+      </p>
+      {items.map((item) => (
+        <DraggableCardBody className={item.className}>
+          <Image
+            src={item.image}
+            alt={item.title}
+            width={320}
+            height={320}
+            className="pointer-events-none relative z-10 object-cover"
+          />
+          <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+            {item.title}
+          </h3>
+        </DraggableCardBody>
+      ))}
+    </DraggableCardContainer>
+  );
+}

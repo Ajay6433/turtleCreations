@@ -22,7 +22,7 @@ const ServicesHeading = () => {
         />
       </div>
       {/* Top Right Star */}
-      <div className="absolute right-0 top-6 z-10">
+      <div className="absolute -right-1 top-6 z-10">
         <Image
           src="/smallIcons/servicesVector.png"
           alt="star"

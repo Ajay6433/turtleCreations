@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import ServicesFrame from "./ServicesFrame";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-[700px] max-w-[1251px] mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0 bg-[#F7FCFC] px-4 lg:px-0 py-10">
+    <div className="w-full h-[700px] max-w-[1251px] mx-auto flex flex-col lg:flex-row items-center justify-evenly gap-6 lg:gap-0 bg-[#F7FCFC] px-4 lg:px-0 py-10 overflow-hidden">
       
       {/* Left Content */}
       <div className="flex flex-col items-start lg:items-start text-center lg:text-left">
@@ -30,19 +31,14 @@ const HeroSection = () => {
 
       {/* Right Image */}
       <div className="w-full max-w-[400px] h-[300px] relative">
-        <Image 
-          alt="Hero-Image"
-          src="/hero-Rectangle.png"
-          layout="fill"
-          objectFit="contain"
-        />
+       <ServicesFrame/>
       </div>
       <Image 
         alt="Hero-Image"
         src="/turtle.png"
-        width={400}
-        height={300}
-        className="hidden lg:block absolute top-48 right-[450px] opacity-10"/>
+        width={900}
+        height={700}
+        className="hidden lg:block absolute top-32 right-[440px] opacity-10"/>
     </div>
   );
 };
