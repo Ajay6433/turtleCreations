@@ -17,9 +17,9 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex">
-          <Link href="/about" className="px-6 py-3 border-r-2 border-black">About //</Link>
-          <Link href="/events" className="px-6 py-3 border-r-2 bg-red-300 border-black"><span className="bg-red-300">Events</span></Link>
-          <Link href="/find-me" className="px-6 py-3">Find me</Link>
+          <Link href="#ServicesHeading" className="px-6 py-3 border-r-2 border-black">About //</Link>
+            <Link href="#GlimpseHeading" className="px-6 py-3 border-r-2 bg-red-300 border-black"><span className="bg-red-300">Events</span></Link>
+          <Link href="#SendMessage" className="px-6 py-3">Find me</Link>
         </div>
 
         {/* Mobile Menu Button */}

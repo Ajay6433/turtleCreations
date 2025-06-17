@@ -24,14 +24,23 @@ const ServicesFrame = () => {
       {/* Inner white square */}
       <div className="absolute left-[30px] top-[30px] w-[290px] h-[290px] bg-white z-10 flex items-center justify-center">
         {/* Inner gray square */}
-        <div className="relative w-[220px] h-[220px] bg-gray-200 flex items-center justify-center">
-          {/* Smiley face */}
-          <svg width="90" height="90" viewBox="0 0 90 90" className="absolute inset-0 m-auto">
-            <ellipse cx="30" cy="35" rx="4" ry="6" fill="#222"/>
-            <ellipse cx="60" cy="35" rx="4" ry="6" fill="#222"/>
-            <path d="M30 60 Q45 75 60 60" stroke="#222" strokeWidth="4" fill="none" />
-          </svg>
-        </div>
+        <div className="relative w-[260px] h-[260px] bg-gray-200 flex items-center justify-center group overflow-hidden">
+  {/* Default Image */}
+  <Image
+    src="/DD1.png"
+    alt="Deepak Das"
+    fill
+    className="object-contain transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+  />
+
+  {/* Hover Image */}
+  <Image
+    src="/DD2.png"
+    alt="Deepak Das Alternate"
+    fill
+    className="object-contain transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
+  />
+</div>
         {/* Top dots */}
         <div className="absolute left-1/2 -top-4 -translate-x-1/2 flex space-x-6">
           <span className="w-4 h-4 bg-black rounded-full inline-block"></span>

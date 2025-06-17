@@ -23,9 +23,11 @@ const HeroSection = () => {
 
         {/* Button */}
         <div className="mt-6">
-          <button className="px-6 py-3 bg-[#FBDBD5] text-black font-medium rounded-full border-4 border-black transition hover:bg-[#f5c2bb]">
-            Contact Us
-          </button>
+          <a href="#SendMessage">
+            <button className="px-6 py-3 bg-[#FBDBD5] text-black font-medium rounded-full border-4 border-black transition hover:bg-[#f5c2bb]">
+              Contact Us
+            </button>
+          </a>
         </div>
       </div>
 
