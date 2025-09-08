@@ -8,25 +8,25 @@ import {
 export function DraggableCardDemo() {
   const items = [
     {
-      title: "Tyler Durden",
+      title: "Some Glimpse",
       image:
         "/corpOutdoor.jpg",
       className: "absolute top-10 left-[20%] rotate-[-5deg]",
     },
     {
-      title: "The Narrator",
+      title: "Some Glimpse",
       image:
         "/edu.jpg",
       className: "absolute top-40 left-[25%] rotate-[-7deg]",
     },
     {
-      title: "Iceland",
+      title: "Some Glimpse",
       image:
         "/personalEvent.jpg",
       className: "absolute top-5 left-[40%] rotate-[8deg]",
     },
     {
-      title: "Japan",
+      title: "Some Glimpse",
       image:
         "/outdoor.jpg",
       className: "absolute top-32 left-[55%] rotate-[10deg]",

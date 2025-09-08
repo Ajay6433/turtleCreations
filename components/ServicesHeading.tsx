@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const ServicesHeading = () => {
   return (
-    <div className="relative w-full max-w-[1251px] mx-auto mt-10 px-4 lg:px-0 py-8 bg-[#f8fcfc] overflow-visible">
+    <div className="relative w-full max-w-[1251px] mx-auto mt-10 px-4 lg:px-0 py-8 bg-[#f8fcfc] overflow-visible" id='ServicesHeading'>
       {/* Top Left Star + Ellipse */}
       <div className="absolute left-0 top-0 z-10">
         <Image
